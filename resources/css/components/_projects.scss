@@ -1,0 +1,21 @@
+.projects {
+	&__title {
+		@include flexbox(center, 0, row, 0.5rem);
+		.underline {
+			align-self: auto;
+		}
+	}
+	&__content {
+		@include flexbox(0, 0, column, 1rem);
+		.project {
+			text-align: center;
+			@include flexbox(center, 0, column, 0.5rem);
+			&__buttons {
+				@include flexbox(0, 0, 0, 1.5rem);
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
+}

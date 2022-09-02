@@ -1,0 +1,161 @@
+@font-face {
+	font-family: 'Inter';
+	src: url('../../assets/font/Inter-Regular.woff2') format('woff2'),
+		url('../../assets/font/Inter-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../../assets/font/Inter-Bold.woff2') format('woff2'),
+		url('../../assets/font/Inter-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: $black;
+	color: $white;
+}
+main,
+section {
+	padding: 2rem;
+}
+
+h1 {
+	font-size: clamp(3.5rem, 6vw, 10rem);
+	font-weight: bold;
+	// background-image: $gradient;
+	// background-clip: text;
+	// color: transparent;
+}
+h2 {
+	font-size: clamp(2.5rem, 3vw, 5.5rem);
+	font-weight: bold;
+}
+h3 {
+	font-size: clamp(1.75rem, 2.5vw, 4rem);
+	font-weight: bold;
+}
+h4 {
+	font-size: clamp(1.5rem, 2vw, 3.25rem);
+	font-weight: bold;
+}
+li {
+	font-size: clamp(1.5rem, 2vw, 3.25rem);
+	font-weight: 400;
+}
+p {
+	font-size: clamp(0.85rem, 1.25vw, 1.75rem);
+	font-weight: 400;
+}
+.bold {
+	font-size: clamp(1.35rem, 1.75vw, 2.5rem);
+	font-weight: bold;
+	color: $accentColor;
+}
+a {
+	text-decoration: none;
+	color: $white;
+	transition: color 0.5s ease-in;
+	cursor: pointer;
+	&:hover {
+		color: $primaryColor;
+	}
+}
+li {
+	list-style: none;
+}
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-image: $gradient;
+	background-color: transparent;
+	color: $white;
+	font-weight: bold;
+	padding: 0.75rem 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.25s ease-in-out;
+	&:hover,
+	&:focus {
+		background-image: none;
+		background-color: $accentColor;
+	}
+}
+
+input {
+	background-color: $white;
+	outline: none;
+	padding: 0.35rem;
+	border: 2px solid $white;
+	transition: border 0.25s ease-in-out;
+	&:hover,
+	&:focus {
+		border: 2px solid $primaryColor;
+	}
+	&::placeholder {
+		color: $black;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+}
+svg {
+	cursor: pointer;
+	path {
+		transition: fill 0.25s ease-in-out;
+	}
+	&:hover,
+	&:focus {
+		path {
+			fill: $primaryColor;
+		}
+	}
+}
+
+.svg path {
+	fill: $white;
+}
+
+.gradient-svg {
+	transition: all 0.25s ease-in-out;
+	&:hover,
+	&:focus {
+		path {
+			fill: $accentColor;
+		}
+	}
+}
+
+.gradient-text {
+	background-image: $gradient;
+	background-clip: text;
+	color: transparent;
+}
+
+.underline {
+	align-self: flex-start;
+	width: 50px;
+	height: 3px;
+	background-image: $gradient;
+}
+.text-xl {
+	font-size: clamp(10rem, 12.5vw, 15rem);
+	font-weight: bold;
+}

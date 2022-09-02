@@ -1,0 +1,18 @@
+main {
+	min-height: 80vh;
+	@include flexbox(center, space-between, row, 1rem);
+	.hero__left-side {
+		.hero__description {
+			@include flexbox(center, 0, 0, 0.5rem);
+			.line {
+				width: 1rem;
+				height: 0.2rem;
+				background-image: $gradient;
+				border-radius: 1rem;
+			}
+		}
+	}
+	.hero__right-side {
+		@include flexbox(center, space-evenly, column, 1rem);
+	}
+}

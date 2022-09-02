@@ -1,0 +1,33 @@
+header {
+	width: 100%;
+	position: sticky;
+	background: $desBlack;
+	backdrop-filter: blur(0.25rem);
+	top: 0;
+	padding: 1.5rem;
+	z-index: 1;
+	.upper-navigation {
+		@include flexbox(center, space-between, 0, 0);
+		svg {
+			width: 40px;
+		}
+		.hidden {
+			display: none;
+		}
+	}
+	nav {
+		display: none;
+		ul {
+			padding: 4rem 0;
+			@include flexbox(center, space-around, column, 2rem);
+			li {
+				a {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.active {
+		display: block;
+	}
+}

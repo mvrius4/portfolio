@@ -1,0 +1,32 @@
+// colors
+
+$white: rgb(230, 230, 230);
+$black: rgb(13, 18, 24);
+$desBlack: rgba(17, 23, 31, 0.75);
+$primaryColor: rgb(37, 185, 233);
+$accentColor: rgb(0, 133, 255);
+$gradient: linear-gradient(90deg, $primaryColor 0%, $accentColor 100%);
+
+// sizes
+
+$sm: 480px;
+$md: 768px;
+$lg: 1080px;
+
+// mixins
+
+@mixin flexbox($align, $justify, $direction, $gap) {
+	display: flex;
+	@if $align != 0 {
+		align-items: $align;
+	}
+	@if $justify != 0 {
+		justify-content: $justify;
+	}
+	@if $direction != 0 {
+		flex-direction: $direction;
+	}
+	@if $gap != 0 {
+		gap: $gap;
+	}
+}

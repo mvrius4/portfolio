@@ -1,0 +1,8 @@
+.about {
+	width: 100%;
+	@include flexbox(center, 0, column, 1.5rem);
+	.about__title {
+		width: fit-content;
+		@include flexbox(center, 0, column, 0);
+	}
+}
