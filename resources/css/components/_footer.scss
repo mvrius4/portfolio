@@ -1,0 +1,9 @@
+footer {
+	background-color: $desBlack;
+	padding: 1rem;
+	margin-top: 1.5rem;
+	@include flexbox(center, 0, column, 1rem);
+	.footer__icons {
+		@include flexbox(0, 0, 0, 0.75rem);
+	}
+}
