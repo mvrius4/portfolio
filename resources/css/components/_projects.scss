@@ -6,15 +6,19 @@
 		}
 	}
 	&__content {
-		@include flexbox(0, 0, column, 1rem);
+		margin-top: 1.5rem;
+		@include flexbox(0, 0, column, 2rem);
 		.project {
 			text-align: center;
-			@include flexbox(center, 0, column, 0.5rem);
+			@include flexbox(center, 0, column, 0.75rem);
 			&__buttons {
 				@include flexbox(0, 0, 0, 1.5rem);
 			}
 			p {
 				text-align: left;
+			}
+			img {
+				width: 320px;
 			}
 		}
 	}

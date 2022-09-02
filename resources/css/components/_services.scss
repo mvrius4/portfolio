@@ -6,6 +6,7 @@
 		@include flexbox(center, 0, column, 0);
 	}
 	&__content {
+		margin: 0 0.5rem;
 		@include flexbox(0, 0, column, 1.5rem);
 		.service {
 			@include flexbox(0, 0, row, 0.25rem);
@@ -13,7 +14,9 @@
 				transform: translateX(-1.5rem);
 			}
 			&:nth-child(even) {
-				transform: translateX(2rem);
+				text-align: right;
+				transform: translateX(1.5rem);
+				@include flexbox(flex-start, 0, row-reverse, 0.25rem);
 			}
 		}
 	}
