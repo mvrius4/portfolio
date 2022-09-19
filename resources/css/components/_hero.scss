@@ -1,18 +1,28 @@
-main {
-	min-height: 80vh;
+.hero {
+	min-height: 90vh;
+	position: relative;
 	@include flexbox(center, space-between, row, 1rem);
-	.hero__left-side {
-		.hero__description {
-			@include flexbox(center, 0, 0, 0.5rem);
-			.line {
-				width: 1rem;
-				height: 0.2rem;
-				background-image: $gradient;
-				border-radius: 1rem;
-			}
+	&__left-side {
+		width: min-content;
+		@include flexbox(0, 0, column, 1rem);
+		&__title {
+			@include flexbox(center, 0, row, 0.5rem);
 		}
 	}
-	.hero__right-side {
+	&__icons {
 		@include flexbox(center, space-evenly, column, 1rem);
+	}
+	&__circle {
+		position: absolute;
+		background: $desBlack;
+		width: 700px;
+		height: 700px;
+		top: -170px;
+		left: -375px;
+		border-radius: 100%;
+		z-index: -1;
+	}
+	@media (min-width: $md) {
+		margin: 0 2.5rem;
 	}
 }

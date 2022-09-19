@@ -1,24 +1,39 @@
 .projects {
+	@include flexbox(0, 0, column, 2rem);
 	&__title {
-		@include flexbox(center, 0, row, 0.5rem);
-		.underline {
-			align-self: auto;
-		}
+		@include flexbox(center, 0, 0, 0.5rem);
 	}
 	&__content {
-		margin-top: 1.5rem;
-		@include flexbox(0, 0, column, 2rem);
-		.project {
-			text-align: center;
-			@include flexbox(center, 0, column, 0.75rem);
-			&__buttons {
-				@include flexbox(0, 0, 0, 1.5rem);
-			}
-			p {
-				text-align: left;
-			}
-			img {
-				width: 320px;
+		@include flexbox(0, center, 0, 2rem);
+		flex-wrap: wrap;
+		&-card {
+			background-color: $desBlack;
+			width: 300px;
+			overflow-wrap: break-word;
+			overflow: hidden;
+			border-radius: 0.5rem;
+			.content-card__info {
+				padding: 1rem;
+				@include flexbox(0, 0, column, 1rem);
+				.content-card__links {
+					padding: 0.5rem;
+					@include flexbox(0, space-evenly, 0, 1rem);
+					a {
+						font-size: clamp(0.85rem, 1.05vw, 1.2rem);
+						font-weight: bold;
+						text-align: center;
+						border: 2px solid $hoverColor;
+						border-radius: 1rem;
+						padding: 0.4rem;
+						transition: color 0.3s ease-in-out,
+							box-shadow 0.3s ease-in-out;
+						&:hover,
+						&:focus {
+							box-shadow: inset 120px 0 0 0 $hoverColor;
+							color: $white;
+						}
+					}
+				}
 			}
 		}
 	}

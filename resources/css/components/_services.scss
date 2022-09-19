@@ -1,23 +1,55 @@
 .services {
+	position: relative;
 	background: $desBlack;
 	width: 100%;
-	@include flexbox(center, 0, column, 1.5rem);
+	overflow: hidden;
+	@include flexbox(0, 0, column, 1.5rem);
 	&__title {
-		@include flexbox(center, 0, column, 0);
+		z-index: 3;
+		@include flexbox(center, 0, 0, 0.5rem);
 	}
 	&__content {
-		margin: 0 0.5rem;
-		@include flexbox(0, 0, column, 1.5rem);
-		.service {
-			@include flexbox(0, 0, row, 0.25rem);
-			&:nth-child(odd) {
-				transform: translateX(-1.5rem);
-			}
-			&:nth-child(even) {
-				text-align: right;
-				transform: translateX(1.5rem);
-				@include flexbox(flex-start, 0, row-reverse, 0.25rem);
+		padding: 1rem;
+		z-index: 3;
+		@include flexbox(0, 0, column, 2.5rem);
+		.services__service {
+			@include flexbox(0, 0, column, 0.5rem);
+		}
+		@media (min-width: $md) {
+			@include flexbox(center, flex-start, row, 2.5rem);
+			.services__service {
+				max-width: 350px;
 			}
 		}
+	}
+	&__circle {
+		position: absolute;
+		background: $black;
+		width: 600px;
+		height: 600px;
+		bottom: -250px;
+		right: -425px;
+		border-radius: 100%;
+		z-index: 2;
+	}
+	.des50,
+	.des25 {
+		background-color: $desBlack;
+		bottom: -200px;
+		right: -375px;
+	}
+	.des50 {
+		box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px,
+			rgba(255, 255, 255, 0.1) 0px 0px 0px 1px;
+		width: 650px;
+		height: 650px;
+		z-index: 1;
+	}
+	.des25 {
+		box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 1px,
+			rgba(255, 255, 255, 0.05) 0px 0px 0px 1px;
+		width: 750px;
+		height: 750px;
+		z-index: 0;
 	}
 }
