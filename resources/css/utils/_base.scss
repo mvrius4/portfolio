@@ -32,6 +32,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	background-color: $black;
 	color: $white;
+	line-height: 1.2;
 }
 main,
 section {
@@ -39,40 +40,36 @@ section {
 }
 
 h1 {
-	font-size: clamp(3.5rem, 6vw, 10rem);
+	font-size: clamp(2.75rem, 7vw, 10rem);
 	font-weight: bold;
-	// background-image: $gradient;
-	// background-clip: text;
-	// color: transparent;
 }
 h2 {
-	font-size: clamp(2.5rem, 3vw, 5.5rem);
+	font-size: clamp(1rem, 1.25vw, 1.5rem);
 	font-weight: bold;
 }
 h3 {
-	font-size: clamp(1.75rem, 2.5vw, 4rem);
+	font-size: clamp(1.65rem, 2vw, 3rem);
 	font-weight: bold;
 }
 h4 {
 	font-size: clamp(1.5rem, 2vw, 3.25rem);
 	font-weight: bold;
 }
+h5 {
+	font-size: clamp(1rem, 1.5vw, 2rem);
+	font-weight: normal;
+}
 li {
 	font-size: clamp(1.5rem, 2vw, 3.25rem);
-	font-weight: 400;
+	font-weight: normal;
 }
 p {
 	font-size: clamp(0.85rem, 1.25vw, 1.75rem);
-	font-weight: 400;
-}
-.bold {
-	font-size: clamp(1.35rem, 1.75vw, 2.5rem);
-	font-weight: bold;
-	color: $accentColor;
+	font-weight: normal;
 }
 a {
-	text-decoration: none;
 	color: $white;
+	text-decoration: none;
 	transition: color 0.5s ease-in;
 	cursor: pointer;
 	&:hover {
@@ -86,17 +83,16 @@ button {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	background-image: $gradient;
-	background-color: transparent;
+	background-color: $primaryColor;
 	color: $white;
 	font-weight: bold;
-	padding: 0.75rem 1rem;
-	border-radius: 0.5rem;
+	padding: 0.45rem 0.75rem;
+	border-radius: 2rem;
+	align-self: flex-start;
 	transition: all 0.25s ease-in-out;
 	&:hover,
 	&:focus {
-		background-image: none;
-		background-color: $accentColor;
+		background-color: $hoverColor;
 	}
 }
 
@@ -118,8 +114,10 @@ input {
 }
 svg {
 	cursor: pointer;
+	width: 30px;
 	path {
 		transition: fill 0.25s ease-in-out;
+		fill: $white;
 	}
 	&:hover,
 	&:focus {
@@ -128,35 +126,25 @@ svg {
 		}
 	}
 }
-
-.svg path {
-	fill: $white;
+.bold {
+	font-weight: bold;
 }
-
-.gradient-svg {
-	transition: all 0.25s ease-in-out;
-	&:hover,
-	&:focus {
-		path {
-			fill: $accentColor;
-		}
-	}
-}
-
-.gradient-text {
-	background-image: $gradient;
-	background-clip: text;
-	color: transparent;
-}
-
-.underline {
-	align-self: flex-start;
-	width: 50px;
-	height: 3px;
-	background-image: $gradient;
+.blue {
+	color: $primaryColor;
 }
 .text-xl {
-	font-size: clamp(10rem, 12.5vw, 15rem);
+	font-size: clamp(6.5rem, 8.5vw, 12rem);
 	font-weight: bold;
-	margin-bottom: -1.65rem;
+}
+.line {
+	width: 1.75rem;
+	padding: 1px;
+	background-color: $primaryColor;
+	border-radius: 1rem;
+}
+
+@media (min-width: $md) {
+	button {
+		padding: 0.65rem 1.15rem;
+	}
 }
