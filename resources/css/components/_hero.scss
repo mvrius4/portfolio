@@ -3,26 +3,59 @@
 	position: relative;
 	@include flexbox(center, space-between, row, 1rem);
 	&__left-side {
-		width: min-content;
+		z-index: 3;
 		@include flexbox(0, 0, column, 1rem);
+		&.desktop {
+			display: none;
+		}
+		&.mobile {
+			width: min-content;
+		}
 		&__title {
 			@include flexbox(center, 0, row, 0.5rem);
 		}
 	}
 	&__icons {
+		z-index: 3;
 		@include flexbox(center, space-evenly, column, 1rem);
 	}
 	&__circle {
 		position: absolute;
 		background: $desBlack;
-		width: 700px;
-		height: 700px;
-		top: -170px;
-		left: -375px;
+		width: 550px;
+		height: 550px;
+		left: -250px;
 		border-radius: 100%;
-		z-index: -1;
+		z-index: 2;
+	}
+	&__bg-text {
+		display: none;
 	}
 	@media (min-width: $md) {
 		margin: 0 2.5rem;
+		.mobile {
+			display: none;
+		}
+		.desktop {
+			display: flex;
+			max-width: 70%;
+		}
+		&__circle {
+			width: 855px;
+			height: 855px;
+			top: -200px;
+			left: -300px;
+		}
+		&__bg-text {
+			font-size: clamp(5rem, 10vw, 15rem);
+			font-weight: bold;
+			color: rgba(255, 255, 255, 0.01);
+			line-height: 1;
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+		}
 	}
 }

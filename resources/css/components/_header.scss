@@ -30,4 +30,23 @@ header {
 	.active {
 		display: block;
 	}
+	@media (min-width: $md) {
+		padding: 2rem;
+		@include flexbox(0, space-between, 0, 0);
+		.upper-navigation {
+			svg {
+				display: none;
+			}
+		}
+		nav {
+			@include flexbox(0, 0, 0, 0);
+			ul {
+				@include flexbox(0, 0, row, 2rem);
+				padding: 0;
+				li {
+					font-size: clamp(0.9rem, 1.3vw, 1.8rem);
+				}
+			}
+		}
+	}
 }
