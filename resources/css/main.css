@@ -37,7 +37,8 @@ section {
   padding: 2rem;
 }
 
-h1 {
+h1,
+.hero-title {
   font-size: clamp(2.75rem, 7vw, 10rem);
   font-weight: bold;
 }
