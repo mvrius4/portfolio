@@ -53,11 +53,6 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.5rem, 2vw, 3.25rem);
-  font-weight: bold;
-}
-
-h5 {
   font-size: clamp(1rem, 1.5vw, 2rem);
   font-weight: normal;
 }
@@ -86,7 +81,8 @@ li {
   list-style: none;
 }
 
-button {
+button,
+.cta {
   border: none;
   outline: none;
   cursor: pointer;
@@ -98,7 +94,9 @@ button {
   align-self: flex-start;
   transition: all 0.25s ease-in-out;
 }
-button:hover, button:focus {
+button:hover, button:focus,
+.cta:hover,
+.cta:focus {
   background-color: rgb(0, 99, 192);
 }
 
