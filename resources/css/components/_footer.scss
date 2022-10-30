@@ -6,4 +6,8 @@ footer {
 	.footer__icons {
 		@include flexbox(0, 0, 0, 0.75rem);
 	}
+	@media (min-width: $md) {
+		padding: 1rem 2.5rem;
+		@include flexbox(center, space-between, row, 1rem);
+	}
 }

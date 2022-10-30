@@ -351,7 +351,6 @@ header .active {
 @media (min-width: 768px) {
   .services__content {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     gap: 2.5rem;
@@ -450,4 +449,14 @@ footer {
 footer .footer__icons {
   display: flex;
   gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

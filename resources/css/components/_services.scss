@@ -16,7 +16,7 @@
 			@include flexbox(0, 0, column, 0.5rem);
 		}
 		@media (min-width: $md) {
-			@include flexbox(center, flex-start, row, 2.5rem);
+			@include flexbox(0, flex-start, row, 2.5rem);
 			.services__service {
 				max-width: 350px;
 			}
