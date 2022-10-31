@@ -68,7 +68,7 @@ p {
 a {
 	color: $white;
 	text-decoration: none;
-	transition: color 0.5s ease-in;
+	transition: color 0.25s ease-in-out;
 	cursor: pointer;
 	&:hover {
 		color: $primaryColor;

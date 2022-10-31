@@ -1,5 +1,5 @@
 .hero {
-	min-height: 90vh;
+	min-height: 93vh;
 	position: relative;
 	@include flexbox(center, space-between, row, 1rem);
 	&__left-side {
