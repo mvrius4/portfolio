@@ -89,6 +89,7 @@ button,
   cursor: pointer;
   background-color: rgb(0, 133, 255);
   color: rgb(230, 230, 230);
+  font-size: clamp(0.75rem, 1vw, 1.15rem);
   font-weight: bold;
   padding: 0.45rem 0.75rem;
   border-radius: 2rem;
@@ -179,6 +180,10 @@ header .upper-navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+header .upper-navigation .logo {
+  width: 32px;
+  cursor: pointer;
 }
 header .upper-navigation svg {
   width: 40px;

@@ -8,6 +8,10 @@ header {
 	z-index: 100;
 	.upper-navigation {
 		@include flexbox(center, space-between, 0, 0);
+		.logo {
+			width: 32px;
+			cursor: pointer;
+		}
 		svg {
 			width: 40px;
 		}

@@ -20,6 +20,17 @@ tl.fromTo('.hero__left-side', { opacity: 0, x: -100 }, { opacity: 1, x: 0 });
 tl.fromTo('.hero__icons', { opacity: 0, x: 100 }, { opacity: 1, x: 0 });
 tl.fromTo('.hero__bg-text', { opacity: 0, y: 100 }, { opacity: 1, y: 0 });
 
+const tlH = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.hero',
+        start: '0%',
+        end: '60%',
+        scrub: true,
+    }
+});
+
+tlH.fromTo('.hero__circle', { scale: 1 }, { scale: .8 });
+
 const tlS = gsap.timeline({
     scrollTrigger: {
         trigger: '.hero',
@@ -40,7 +51,7 @@ const tlS2 = gsap.timeline({
     }
 });
 
-tlS2.fromTo('.services__circle', { opacity: 0, x: -150 }, { opacity: 1, x: 0, stagger: .1 });
+tlS2.fromTo('.services__circle', { scale: 1.1, x: -100 }, { scale: 1, x: 0 });
 
 tlP = gsap.timeline({
     scrollTrigger: {
