@@ -4,7 +4,7 @@
 		@include flexbox(center, 0, 0, 0.5rem);
 	}
 	&__content {
-		@include flexbox(flex-start, center, 0, 2rem);
+		@include flexbox(flex-start, center, 0, 3rem);
 		flex-wrap: wrap;
 		&-card {
 			background-color: $desBlack;

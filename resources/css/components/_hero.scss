@@ -58,4 +58,12 @@
 			z-index: 1;
 		}
 	}
+	@media (min-width: 1600px) {
+		&__circle {
+			width: 1055px;
+			height: 1055px;
+			top: -200px;
+			left: -300px;
+		}
+	}
 }

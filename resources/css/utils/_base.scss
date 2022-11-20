@@ -42,7 +42,7 @@ section {
 
 h1,
 .hero-title {
-	font-size: clamp(2.75rem, 7vw, 10rem);
+	font-size: clamp(2.75rem, 5.5vw, 8rem);
 	font-weight: bold;
 }
 h2 {
@@ -50,7 +50,7 @@ h2 {
 	font-weight: bold;
 }
 h3 {
-	font-size: clamp(1.65rem, 2vw, 3rem);
+	font-size: clamp(1.45rem, 1.85vw, 2.5rem);
 	font-weight: bold;
 }
 h4 {
@@ -58,11 +58,11 @@ h4 {
 	font-weight: normal;
 }
 li {
-	font-size: clamp(1.5rem, 2vw, 3.25rem);
+	font-size: clamp(1.5rem, 2vw, 3rem);
 	font-weight: normal;
 }
 p {
-	font-size: clamp(0.85rem, 1.25vw, 1.75rem);
+	font-size: clamp(0.85rem, 1.15vw, 1.5rem);
 	font-weight: normal;
 }
 a {

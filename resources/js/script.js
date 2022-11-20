@@ -29,7 +29,7 @@ const tlH = gsap.timeline({
     }
 });
 
-tlH.fromTo('.hero__circle', { scale: 1 }, { scale: .8 });
+tlH.fromTo('.hero__circle', { scale: 1 }, { scale: .6 });
 
 const tlS = gsap.timeline({
     scrollTrigger: {
